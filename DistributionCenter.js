@@ -1,3 +1,8 @@
+const product = require('./Product.js');
+const queue = require('./queue.js');
+const Truck = require('./Truck.js');
+const linkedList = require('./liinkedList.js');
+const node = require('./node.js');
 //require all of the other files, with node.js,  linkedlist.js, and queue.js
 
 function configureWareHouse(numberofitems){
