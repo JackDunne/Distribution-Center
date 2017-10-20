@@ -1,8 +1,6 @@
-const product = require('./Product.js');
-const queue = require('./queue.js');
+const Product = require('./Product.js');
+const Queue = require('./queue.js');
 const Truck = require('./Truck.js');
-const linkedList = require('./liinkedList.js');
-const node = require('./node.js');
 //require all of the other files, with node.js,  linkedlist.js, and queue.js
 
 function configureWareHouse(numberofitems){
@@ -11,16 +9,25 @@ function configureWareHouse(numberofitems){
     for(let x=0;x<numberofitems;x++){
         Warehouse.enqueue(new Product());
     }
-    return warehouse;
+    return Warehouse;
 
 }
 function configureTruckFleet(numberoftrucks){
-    let theFleet = new LinkedList();
+    let theFleet = new Queue();
     //fill the fleet with different sized trucks using math.random()
+    for(let x=0;x<numberofitems;x++){
+        theFleet.enqueue(new Truck());
+    }
     return theFleet;
 }
 function distribute(wh,tf){
+  tempTruck;
+  for(let c = 0;c<)
     //distribute the products in the warehouse to the truck fleet.
+    for(let x = 0;x<inventory.length;x++){
+    spaceTakenUp += Product.space
+    }
+
 }
 function ship(fleet,percent){
     //if the trucks spaceEfficency is greater than or equal to the percent, then remove the truck from the fleet's linked list

@@ -1,11 +1,12 @@
-const LinkedList = require('./LinkedList.js');
+
 
 const Truck = function(){
     let type = size;
-    let inventory = new LinkedList();
+    let inventory = [];
     let capacity = setCapacity(size);
+
     function setCapacity(){
-        s = s.toLowerCase();
+        type = type.toLowerCase();
         if(size == "small"){
             return 1000;
         }
@@ -23,8 +24,7 @@ const Truck = function(){
       let sum = 0;
       let len = inventory.length;
       for(let x = 0;x<len;x++){
-        let node = inventory.getNode(x);
-        sum += node.getValue().space;
+        sum += inventory[x].space;
       }
       return sum/capacity;
     }
