@@ -1,8 +1,8 @@
 const Product = function(){
-    let name = determineName();
-    let price = determineNumber();
-    let space = determineNumber();
-    let prime = determinePrime();
+    this.name = determineName();
+    this.price = determineNumber();
+    this.space = determineNumber();
+    this.prime = determinePrime();
 
     function determineName(){
         let word = "";
@@ -20,10 +20,11 @@ const Product = function(){
     function determinePrime(){
         let randoNum = Math.random()*100;
         if(randoNum > 50){
-            prime = true;
+            this.prime = true;
         }
         else{
-            prime = false;
+            this.prime = false;
         }
     }
 }
+module.exports = Product;

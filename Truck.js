@@ -1,6 +1,6 @@
 
 
-const Truck = function(){
+const Truck = function(size){
     let type = size;
     let inventory = [];
     let capacity = setCapacity(size);
@@ -29,3 +29,4 @@ const Truck = function(){
       return sum/capacity;
     }
 }
+module.exports = Truck;
