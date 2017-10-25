@@ -26,5 +26,6 @@ const Product = function(){
             this.prime = false;
         }
     }
+    return{name,price,space,prime};
 }
 module.exports = Product;

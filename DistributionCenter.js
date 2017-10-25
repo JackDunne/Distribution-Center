@@ -18,7 +18,15 @@ function configureTruckFleet(numberoftrucks){
     for(let x=0;x<numberoftrucks;x++){
         let truckSize;
         let rando = Math.random()*100;
-        if()
+        if(rando >= 66){
+          size = "large";
+        }
+        else if(rando < 66 && rando >= 33){
+          size = "medium";
+        }
+        else{
+          size = "small";
+        }
         theFleet.enqueue(new Truck());
     }
     return theFleet;
@@ -41,9 +49,10 @@ function distribute(wh,tf){
 
 
 function main(){
-    let flemhouse = configureWareHouse(100);
-    let flemfleet = configureTruckFleet(20);
-    let ready = distribute(flemhouse,flemfleet);
+    let flemhouse = configureWareHouse(10);
+    let flemfleet = configureTruckFleet(10);
+    let ready = distribute(flemhouse,flemfleet, 0.95);
+    ready.print();
     console.log(ready);
     for(let s=0;s<ready.length;s++){
         console.log("Truck "+s+" is in route");
